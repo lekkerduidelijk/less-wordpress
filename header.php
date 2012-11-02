@@ -6,7 +6,7 @@
 ?><!doctype html>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title><?php wp_title('&laquo;' ?></title>
+<title><?php wp_title('&laquo;') ?></title>
 <?php
 // Install Wordpress SEO plugin from Yoast for page title and meta description
 // See: http://lrdk.nl/fn
