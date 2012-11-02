@@ -10,7 +10,7 @@ get_header(); ?>
       <?php while (have_posts()) : the_post(); ?>
         <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
           <header>
-            <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php e_("Permanent link to", "lwp" ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+            <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e("Permanent link to", "lwp" ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
             <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('j F Y') ?></time>
           </header>
           <?php the_content(); ?>
