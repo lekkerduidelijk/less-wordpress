@@ -21,7 +21,7 @@
 <![endif]-->
 <div id="container">
   <header role="banner">
-    <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+    <figure id="logo"><a href="<?php echo get_option('home'); ?>/"><img src="<?php bloginfo('url'); ?>img/logo.png" alt="<?php bloginfo('name'); ?>"></a></figure>
     <p class="description"><?php bloginfo('description'); ?></p>
     <nav id="access" role="navigation">
       <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
