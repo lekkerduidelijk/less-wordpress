@@ -69,7 +69,7 @@ if(!function_exists('versioned_resource')) {
       $file_version = "?v=".filemtime($file);
     }
 
-    return get_bloginfo('template_url').'/'.$relative_url.$file_version;
+    return get_bloginfo('template_url').$relative_url.$file_version;
   }
 }
 
