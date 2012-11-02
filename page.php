@@ -5,26 +5,19 @@
  */
 
 get_header(); ?>
-
-<div id="content" role="main">
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<article class="post" id="post-<?php the_ID(); ?>">
-			<header>
-				<h2><?php the_title(); ?></h2>
-			</header>
-
-			<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
-
-			<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-
-		</article>
-	<?php endwhile; endif; ?>
-	<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
-
-	<?php comments_template(); ?>
-
-</div>
-
-<?php get_sidebar(); ?>
-
+<div role="main">
+  <div id="content">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <article class="post" id="post-<?php the_ID(); ?>">
+        <header>
+          <h1><?php the_title(); ?></h1>
+        </header>
+        <?php the_content(); ?>
+      </article>
+    <?php endwhile; endif; ?>
+    <?php edit_post_link(__("Edit this entry","lwp"), "<p>", "</p>"); ?>
+    <?php comments_template(); ?>
+  </div>
+  <?php get_sidebar(); ?>
+</div> <!-- [role=main] -->
 <?php get_footer(); ?>

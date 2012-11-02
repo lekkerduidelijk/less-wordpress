@@ -12,8 +12,8 @@ if(!function_exists("lwp_setup")) {
   function lwp_setup(){
     if(function_exists( "register_nav_menu")) {
       add_theme_support("menus");
-      register_nav_menu("primary", "Primary navigation");
-      register_nav_menu("footer", "Footer navigation");
+      register_nav_menu("primary", __("Primary navigation", "lwp"));
+      register_nav_menu("footer",  __("Footer navigation",  "lwp"));
     }
 
     // Widgetized Sidebar HTML5 Markup
@@ -88,7 +88,7 @@ add_filter( 'excerpt_length', 'lwp_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function lwp_continue_reading_link() {
-  return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'lwp' ) . '</a>';
+  return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading', 'lwp' ) . '</a>';
 }
 
 /**

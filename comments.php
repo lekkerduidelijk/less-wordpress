@@ -2,6 +2,9 @@
 /**
  * @package WordPress
  * @subpackage LESS_Wordpress
+ * @todo: Refactor this file
+ * @todo: Add i18n tags
+ * @todo: Check if we really still need this file?
  */
 
 // Do not delete these lines
