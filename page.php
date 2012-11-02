@@ -3,7 +3,6 @@
  * @package WordPress
  * @subpackage LESS_Wordpress
  */
-
 get_header(); ?>
 <div role="main">
   <div id="content">

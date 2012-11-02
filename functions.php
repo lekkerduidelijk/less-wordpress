@@ -20,7 +20,7 @@ if(!function_exists("lwp_setup")) {
     if ( function_exists("register_sidebar") ) {
       register_sidebar(array(
         "name"          => "Sidebar",
-        "before_widget" => "<section class="widget">",
+        "before_widget" => "<section class='widget'>",
         "after_widget"  => "</section>",
         "before_title"  => "<h2>",
         "after_title"   => "</h2>"

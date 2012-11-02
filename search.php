@@ -3,7 +3,6 @@
  * @package WordPress
  * @subpackage LESS_Wordpress
  */
-
 get_header(); ?>
 <div role="main">
   <div id="content">
@@ -12,18 +11,18 @@ get_header(); ?>
         <h1><?php e_("Search results", "lwp" ); ?></h1>
       </header>
       <nav>
-        <div><?php next_posts_link("&laquo; ".__("Older Entries","lwp")) ?></div>
-        <div><?php previous_posts_link(__("Newer Entries","lwp"). "&raquo;") ?></div>
+        <div><?php next_posts_link("&laquo; ".__("Older entries","lwp")) ?></div>
+        <div><?php previous_posts_link(__("Newer entries","lwp"). "&raquo;") ?></div>
       </nav>
       <?php while (have_posts()) : the_post(); ?>
         <article <?php post_class() ?>>
-          <h1 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php e_("Permanent Link to", "lwp" ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+          <h1 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php e_("Permanent link to", "lwp" ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
           <time><?php the_time('j F Y') ?></time>
         </article>
       <?php endwhile; ?>
       <nav>
-        <div><?php next_posts_link("&laquo; ".__("Older Entries","lwp")) ?></div>
-        <div><?php previous_posts_link(__("Newer Entries","lwp"). "&raquo;") ?></div>
+        <div><?php next_posts_link("&laquo; ".__("Older entries","lwp")) ?></div>
+        <div><?php previous_posts_link(__("Newer entries","lwp"). "&raquo;") ?></div>
       </nav>
     <?php else : ?>
       <article>
