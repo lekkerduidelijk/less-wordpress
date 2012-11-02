@@ -1,0 +1,166 @@
+/*!
+ * Less Template
+ * @author: Rutger Laurman - lekkerduidelijk.nl
+ * @url: https://github.com/lekkerduidelijk/less-template
+ */
+
+// Personal less template, used for starting projects
+// Snippets of reusable CSS, a collection of the ones I most often
+//
+// Inspired by h5pb.com
+// Uses normalize.css
+// Uses Twitter Bootstrap mixins
+
+// Import normalize
+// =============================================================================
+@import url(normalize.less);
+
+// =============================================================================
+// Base (additions to normalize.css, inspired by h5bp.com/css)
+// =============================================================================
+
+// Base text color
+html, button, input, select, textarea {
+  color: #222;
+}
+
+// Base font size
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+// Default link style
+a {
+  color: #00e;
+}
+a:visited {
+  color: #551a8b;
+}
+a:hover {
+  color: #06e;
+}
+
+// H5BP additions
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+// =============================================================================
+// Site mixins
+// =============================================================================
+
+// Colors
+
+// Sprites
+
+// Buttons
+
+// =============================================================================
+// Primary styles
+// =============================================================================
+
+
+
+// =============================================================================
+// Utility mixins
+// =============================================================================
+
+// Micro clearfix - lrdk.nl/ck
+.cf {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Image replacement
+.ir {
+  background-color: transparent;
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+
+// Helpers
+.nospace { margin: 0; padding: 0; }
+.debug { border: thin solid red; }
+.debugbg { background-color: red !important; }
+
+// Image alignment
+.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+// =============================================================================
+// CSS3 vendor mixins
+// - from https://github.com/twitter/bootstrap/blob/master/less/mixins.less
+// =============================================================================
+
+// Border Radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+// Gradient mixin
+// Vertical - top to bottom
+.gradientvertical(@startColor: #555, @endColor: #333) {
+  background-color: mix(@startColor, @endColor, 60%);
+  background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+  background-image: -ms-linear-gradient(top, @startColor, @endColor); // IE10
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+  background-image: linear-gradient(top, @startColor, @endColor); // The standard
+  background-repeat: repeat-x;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
+}
+
+// Horizontal - left to right
+.gradienthorizontal(@startColor: #555, @endColor: #333) {
+  background-color: @endColor;
+  background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
+  background-image: -ms-linear-gradient(left, @startColor, @endColor); // IE10
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
+  background-image: linear-gradient(left, @startColor, @endColor); // Le standard
+  background-repeat: repeat-x;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down
+}
+
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
