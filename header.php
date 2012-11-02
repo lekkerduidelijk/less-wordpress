@@ -6,7 +6,7 @@
 ?><!doctype html>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title><?php wp_title('&laquo;' ?></title>
+<title><?php wp_title('&laquo;') ?></title>
 <?php
 // Install Wordpress SEO plugin from Yoast for page title and meta description
 // See: http://lrdk.nl/fn
@@ -21,7 +21,7 @@
 <![endif]-->
 <div id="container">
   <header role="banner">
-    <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+    <figure id="logo"><a href="<?php echo get_option('home'); ?>/"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="<?php bloginfo('name'); ?>"></a></figure>
     <p class="description"><?php bloginfo('description'); ?></p>
     <nav id="access" role="navigation">
       <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
