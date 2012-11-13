@@ -40,7 +40,7 @@ msgstr "Bewerk dit bericht"
 # <li><?php _e("an out-of-date link","lwp") ?></li>
 # </ul>
 msgid "an out-of-date link"
-msgstr "verouderde link"
+msgstr "een verouderde link"
 
 # <ul>
 # <li><?php _e("a mistyped address","lwp") ?></li>
@@ -52,7 +52,7 @@ msgstr "een fout getypt adres"
 # <p><?php _e("It looks like this was the result of either","lwp") ?>:</p>
 # <ul>
 msgid "It looks like this was the result of either"
-msgstr "Het lijkt erop dat dit het resultaat was van:"
+msgstr "Het lijkt erop dat dit het resultaat was van"
 
 # </header>
 # <p><?php _e("Sorry, but the page you were trying to view does not exist.","lwp") ?></p>
