@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Less Wordpress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-13 09:30+0100\n"
-"PO-Revision-Date: 2012-11-13 09:35+0100\n"
+"POT-Creation-Date: 2012-11-13 09:41+0100\n"
+"PO-Revision-Date: 2012-11-13 09:42+0100\n"
 "Last-Translator: Rutger Laurman <info@lekkerduidelijk.nl>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -82,6 +82,18 @@ msgstr "ingelogd"
 #: comments.php:60
 msgid "to post a comment."
 msgstr "om te reageren."
+
+#: comments.php:65
+msgid "Logged in as"
+msgstr "Ingelogd als"
+
+#: comments.php:65
+msgid "Log out of this account"
+msgstr "Uitloggen van deze account"
+
+#: comments.php:65
+msgid "Log out"
+msgstr "Uitloggen"
 
 #: comments.php:68
 msgid "Name"

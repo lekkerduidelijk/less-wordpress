@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Less Wordpress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-13 09:30+0100\n"
-"PO-Revision-Date: 2012-11-13 09:30+0100\n"
+"POT-Creation-Date: 2012-11-13 09:41+0100\n"
+"PO-Revision-Date: 2012-11-13 09:42+0100\n"
 "Last-Translator: Rutger Laurman <info@lekkerduidelijk.nl>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -34,8 +34,24 @@ msgstr ""
 msgid "an out-of-date link"
 msgstr ""
 
+#: comments.php:9
+msgid "Please do not load this page directly. Thanks!"
+msgstr ""
+
 #: comments.php:12
 msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:21
+msgid "No Responses"
+msgstr ""
+
+#: comments.php:21
+msgid "One Response"
+msgstr ""
+
+#: comments.php:21
+msgid "% Responses"
 msgstr ""
 
 #: comments.php:21
@@ -44,6 +60,15 @@ msgstr ""
 
 #: comments.php:44
 msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:53
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:53
+#, php-format
+msgid "Leave a Reply to %s"
 msgstr ""
 
 #: comments.php:60
@@ -56,6 +81,18 @@ msgstr ""
 
 #: comments.php:60
 msgid "to post a comment."
+msgstr ""
+
+#: comments.php:65
+msgid "Logged in as"
+msgstr ""
+
+#: comments.php:65
+msgid "Log out of this account"
+msgstr ""
+
+#: comments.php:65
+msgid "Log out"
 msgstr ""
 
 #: comments.php:68
@@ -87,8 +124,36 @@ msgstr ""
 msgid "Submit Comment"
 msgstr ""
 
+#: functions.php:15
+msgid "Primary navigation"
+msgstr ""
+
+#: functions.php:16
+msgid "Footer navigation"
+msgstr ""
+
+#: functions.php:91
+msgid "Continue reading"
+msgstr ""
+
 #: index.php:13
 msgid "Permanent link to"
+msgstr ""
+
+#: index.php:20
+#: search.php:14
+#: search.php:24
+msgid "Older entries"
+msgstr ""
+
+#: index.php:21
+#: search.php:15
+#: search.php:25
+msgid "Newer entries"
+msgstr ""
+
+#: page.php:17
+msgid "Edit this entry"
 msgstr ""
 
 #: single.php:25
