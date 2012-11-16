@@ -15,7 +15,7 @@
   }
 ?>
 
-<!-- You can start editing here. -->
+<?php /* You can start editing here. */ ?>
 
 <?php if ( have_comments() ) : ?>
   <h3 id="comments"><?php comments_number(__("No Responses","lwp"), __("One Response","lwp"), __("% Responses","lwp") );?> <?php _e("to","lwp") ?> &#8220;<?php the_title(); ?>&#8221;</h3>
@@ -36,11 +36,11 @@
 <?php else : // this is displayed if there are no comments so far ?>
   <?php if ( comments_open() ) : ?>
 
-    <!-- If comments are open, but there are no comments. -->
+    <?php /* If comments are open, but there are no comments. */ ?>
 
   <?php else : // comments are closed ?>
 
-    <!-- If comments are closed. -->
+    <?php /* If comments are closed. */ ?>
     <p class="nocomments"><?php _e("Comments are closed.","lwp") ?></p>
 
   <?php endif; ?>
@@ -93,4 +93,4 @@
     <?php endif; // If registration required and not logged in ?>
   </section>
 
-<?php endif; // if you delete this the sky will fall on your head ?>
+<?php endif;
