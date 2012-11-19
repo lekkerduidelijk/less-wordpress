@@ -23,9 +23,9 @@ get_header(); ?>
     <?php else : ?>
       <article>
         <header>
-          <h1><?php e_("Not Found","lwp"); ?></h1>
+          <h1><?php _e("Not Found","lwp"); ?></h1>
         </header>
-        <p><?php e_("Sorry, but you are looking for something that isn't here.", "lwp" ); ?></p>
+        <p><?php _e("Sorry, but you are looking for something that isn't here.", "lwp" ); ?></p>
         <?php get_search_form(); ?>
       </article>
     <?php endif; ?>
