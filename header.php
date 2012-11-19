@@ -16,7 +16,7 @@
 <?php wp_head(); ?>
 <script src="<?php bloginfo('template_url') ?>/js/modernizr.js"></script>
 <body <?php body_class(); ?>>
-<!--[if lte IE 6]><iframe src="http://www.browserupgrade.info/ie6-upgrade/?lang=en&gc=true" frameborder="no" style="height: 81px; width: 100%; border: none;"></iframe><![endif]-->
+<!--[if lte IE 7]><iframe src="http://www.browserupgrade.info/ie6-upgrade/?lang=en&gc=true" frameborder="no" style="height: 81px; width: 100%; border: none;"></iframe><![endif]-->
 <div id="container">
   <header role="banner">
     <figure id="logo"><a href="<?php echo get_option('home'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="<?php bloginfo('name'); ?>"></a></figure>
