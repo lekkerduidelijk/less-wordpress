@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Less Wordpress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-13 09:41+0100\n"
-"PO-Revision-Date: 2012-11-13 09:42+0100\n"
+"POT-Creation-Date: 2012-11-19 14:54+0100\n"
+"PO-Revision-Date: 2012-11-19 14:56+0100\n"
 "Last-Translator: Rutger Laurman <info@lekkerduidelijk.nl>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -137,6 +137,7 @@ msgid "Continue reading"
 msgstr "Lees verder"
 
 #: index.php:13
+#: search.php:19
 msgid "Permanent link to"
 msgstr "Permanente link naar"
 
@@ -152,9 +153,29 @@ msgstr "Oudere berichten"
 msgid "Newer entries"
 msgstr "Nieuwere berichten"
 
+#: index.php:26
+msgid "Not Found"
+msgstr "Niet gevonden"
+
+#: index.php:28
+msgid "Sorry, but you are looking for something that isn't here."
+msgstr "Sorry, maar u zoekt naar iets dat niet kon worden gevonden."
+
 #: page.php:17
 msgid "Edit this entry"
 msgstr "Bewerk dit bericht"
+
+#: search.php:11
+msgid "Search results"
+msgstr "Zoek resultaten"
+
+#: search.php:29
+msgid "No posts found"
+msgstr "Geen berichten gevonden"
+
+#: search.php:30
+msgid "Try a different search?"
+msgstr "Probeer een andere zoekopdracht?"
 
 #: single.php:25
 msgid "No posts"
