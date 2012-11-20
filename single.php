@@ -11,6 +11,7 @@ get_header(); ?>
       <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
         <header>
           <h1><?php the_title(); ?></h1>
+          <time datetime="<?php the_time('c'); ?>"><?php the_date(); ?></time>
         </header>
         <?php the_content(); ?>
         <nav>
