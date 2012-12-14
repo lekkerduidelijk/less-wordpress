@@ -19,3 +19,7 @@ I found myself stripping out the same stuff over and over again, that's why I cr
 ## Recommended plugin
 
 * [Wordpress SEO plugin](http://yoast.com/wordpress/seo/) by Yoast
+* [Gravity Forms](http://gravityforms.com) by Rocketgenius
+
+---
+<img src="https://raw.github.com/lekkerduidelijk/less-wordpress/master/screenshot.png">
