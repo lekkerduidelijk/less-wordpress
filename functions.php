@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Dingemans
+ * @subpackage LESS_Wordpress
  *
  * Credits for most of this file go to Walker Hamiltons work on his Wordpress
  * theme html5-boilerplate-for-wordpress.
