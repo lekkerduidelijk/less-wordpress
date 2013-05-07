@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage LESS_Wordpress
+ * @subpackage Dingemans
  *
  * Credits for most of this file go to Walker Hamiltons work on his Wordpress
  * theme html5-boilerplate-for-wordpress.
@@ -102,3 +102,46 @@ function lwp_auto_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'lwp_auto_excerpt_more' );
 
+/**
+ * Deletes all CSS classes and id's, except for those listed in the array below
+ */
+function lwp_wp_nav_menu($var) {
+  return is_array($var) ? array_intersect($var, array(
+    //List of allowed menu classes
+    'current_page_item',
+    'current_page_parent',
+    'current_page_ancestor',
+    'first',
+    'last',
+    'vertical',
+    'horizontal'
+    )
+  ) : '';
+}
+add_filter('nav_menu_css_class', 'lwp_wp_nav_menu');
+add_filter('nav_menu_item_id', 'lwp_wp_nav_menu');
+add_filter('page_css_class', 'lwp_wp_nav_menu');
+
+/**
+ * Replaces "current-menu-item" with "active"
+ */
+function lwp_current_to_active($text){
+  $replace = array(
+    //List of menu item classes that should be changed to "active"
+    'current_page_item'     => 'active',
+    'current_page_parent'   => 'active_parent',
+    'current_page_ancestor' => 'active_ancestor',
+  );
+  $text = str_replace(array_keys($replace), $replace, $text);
+  return $text;
+}
+add_filter ('wp_nav_menu','lwp_current_to_active');
+
+/**
+ * Deletes empty classes and removes the sub menu class
+ */
+function lwp_strip_empty_classes($menu) {
+  $menu = preg_replace('/ class=""| class="sub-menu"/','',$menu);
+  return $menu;
+}
+add_filter ('wp_nav_menu','lwp_strip_empty_classes');
