@@ -145,3 +145,12 @@ function lwp_strip_empty_classes($menu) {
   return $menu;
 }
 add_filter ('wp_nav_menu','lwp_strip_empty_classes');
+
+/**
+ * Give editor role full access to Gravity Forms in admin
+ */
+function lwp_add_gf_access(){
+  $role = get_role('editor');
+  $role->add_cap('gform_full_access');
+}
+add_action('admin_init','lwp_add_gf_access');
