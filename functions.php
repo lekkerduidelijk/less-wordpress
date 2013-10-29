@@ -164,3 +164,37 @@ function is_blog () {
   $posttype = get_post_type($post );
   return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
 }
+
+/**
+ * Partial helper
+ * Loads partials from the partials folder
+ */
+function lwp_partial($partial) {
+  locate_template('partials/'.$partial.'.php',true);
+}
+
+/**
+ * Header image helper
+ * Get a header image for the current page (works only for pages)
+ */
+function lwp_get_header_image_src() {
+  global $post;
+
+  // Default
+  $header_image_src =  get_bloginfo('template_url').'/img/header-default.jpg';
+
+  // Do we have a featured image ?
+  if(has_post_thumbnail($post->ID)) {
+    $header_image_src = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+  } else {
+    // Walk up the tree
+    $ancestors = get_ancestors($post->ID,'page');
+    foreach($ancestors as $ancestor) {
+      if(has_post_thumbnail($ancestor)) {
+        $header_image_src = wp_get_attachment_url( get_post_thumbnail_id($ancestor) );
+        break; // We have our image
+      }
+    }
+  }
+  return $header_image_src;
+}
