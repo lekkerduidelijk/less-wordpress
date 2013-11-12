@@ -198,3 +198,31 @@ function lwp_get_header_image_src() {
   }
   return $header_image_src;
 }
+
+/**
+ * Get subpages
+ * Check for children pages and return the output
+ */
+function lwp_get_subpages() {
+  global $post;
+
+  // If we are on a subpage
+  if($post->post_parent) {
+    $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+
+  // If we are on a not found page
+  } elseif(is_404()) {
+    $children = wp_list_pages("title_li=&echo=0&depth=1");
+
+  // Else just get the children of the current post
+  } else {
+    $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+
+  }
+
+  // Render subnav menu
+  if ($children)
+    return $children;
+  else
+    return false;
+}
