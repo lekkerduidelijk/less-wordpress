@@ -111,6 +111,7 @@ function lwp_wp_nav_menu($var) {
     'current_page_item',
     'current_page_parent',
     'current_page_ancestor',
+    'current-page-ancestor',
     'first',
     'last',
     'vertical',
@@ -136,6 +137,7 @@ function lwp_current_to_active($text){
   return $text;
 }
 add_filter ('wp_nav_menu','lwp_current_to_active');
+add_filter ('wp_list_pages','lwp_current_to_active');
 
 /**
  * Deletes empty classes and removes the sub menu class
