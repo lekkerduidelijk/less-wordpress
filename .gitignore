@@ -43,6 +43,10 @@ publish
 build/buildinfo.properties
 build/config/buildinfo.properties
 
+# Grunt and bower
+node_modules
+vendor
+
 # Wordpress
 wp-config.php
 .htaccess
