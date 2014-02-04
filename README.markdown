@@ -11,7 +11,8 @@ I found myself stripping out the same stuff over and over again, that's why I cr
 
 * [Download](https://github.com/lekkerduidelijk/less-wordpress/zipball/master) the theme
 * [Download Wordpress](http://wordpress.org)
-* Setup your [LESS compiler](http://lesscss.org) to scan the css folder
+* Run <code>npm install</code>
+* Run <code>bower install</code>
 * Move <code>.gitignore</code> to the Wordpress root folder before you get going
 * Get cracking!
 
