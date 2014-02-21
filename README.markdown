@@ -13,7 +13,8 @@ I found myself stripping out the same stuff over and over again, that's why I cr
 * [Download Wordpress](http://wordpress.org)
 * Run <code>npm install</code>
 * Run <code>bower install</code>
-* Move <code>.gitignore</code> to the Wordpress root folder before you get going
+* Run <code>grunt build</code> for the first time
+* Run <code>grunt watch</code> during development
 * Get cracking!
 
 ## Recommended plugin
