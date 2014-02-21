@@ -14,7 +14,9 @@
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" type="text/css" href="<?php echo versioned_resource('/css/style.css') ?>">
 <?php wp_head(); ?>
-<script src="<?php bloginfo('template_url') ?>/js/modernizr.js"></script>
+<!--[if lt IE 9]>
+  <script src="<?php echo versioned_resource('/js/oldbrowsers.js') ?>"></script>
+<![endif]-->
 <body <?php body_class(); ?>>
 <!--[if lte IE 7]><iframe src="http://www.browserupgrade.info/ie6-upgrade/?lang=en&gc=true" frameborder="no" style="height: 81px; width: 100%; border: none;"></iframe><![endif]-->
 <div id="container">

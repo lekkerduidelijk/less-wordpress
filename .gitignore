@@ -45,9 +45,11 @@ build/config/buildinfo.properties
 
 # Grunt and bower
 node_modules
-vendor
+bower_components
+
+# Apache
+.htaccess
 
 # Wordpress
 wp-config.php
-.htaccess
 wp-content/uploads

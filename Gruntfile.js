@@ -17,14 +17,21 @@ module.exports = function(grunt) {
       }
     },
     concat: {
-      production: {
+      base: {
         src: [
-          'vendor/jquery/jquery.js',
-          'vendor/modernizr/modernizr.js',
+          'bower_components/jquery/jquery.js',
+          'bower_components/modernizr/modernizr.js',
           'js/plugins.js',
           'js/main.js',
         ],
         dest: 'js/all.js',
+      },
+      oldbrowsers: {
+        src: [
+          'bower_components/html5shiv/dist/html5shiv.js',
+          'bower_components/respond/dest/respond.min.js'
+        ],
+        dest: 'js/oldbrowsers.js',
       }
     },
     uglify: {
@@ -98,10 +105,10 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-banner');
   grunt.loadNpmTasks('grunt-notify');
 

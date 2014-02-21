@@ -12,14 +12,17 @@
     )); ?>
   </footer>
 </div>
-<script src="<?php echo versioned_resource('/js/plugins.js'); ?>"></script>
-<script src="<?php echo versioned_resource('/js/main.js'); ?>"></script>
+<script>
+  (function(){
+    var lrdk = document.createElement('script');
+    lrdk.src = "<?php echo versioned_resource('/js/all.min.js'); ?>";
+    lrdk.type = 'text/javascript';
+    lrdk.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(lrdk, s);
+  })();
+</script>
+
 <?php wp_footer(); ?>
-<!-- <script>
-  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
-</script> -->
 </body>
 </html>
