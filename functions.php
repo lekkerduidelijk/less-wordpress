@@ -257,3 +257,12 @@ function lwp_limit_words($string, $word_limit){
   $words = explode(" ",$string);
   return implode(" ",array_splice($words,0,$word_limit));
 }
+
+
+/**
+ * Disable Theme Editor
+ */
+function lwp_remove_editor_menu() {
+    remove_action('admin_menu', '_add_themes_utility_last', 101);
+}
+add_action('_admin_menu', 'lwp_remove_editor_menu', 1);
