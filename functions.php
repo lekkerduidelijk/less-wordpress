@@ -263,6 +263,6 @@ function lwp_limit_words($string, $word_limit){
  * Disable Theme Editor
  */
 function lwp_remove_editor_menu() {
-    remove_action('admin_menu', '_add_themes_utility_last', 101);
+  remove_action('admin_menu', '_add_themes_utility_last', 101);
 }
 add_action('_admin_menu', 'lwp_remove_editor_menu', 1);
