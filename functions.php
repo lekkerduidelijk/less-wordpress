@@ -254,8 +254,8 @@ function lwp_fragment_cache($key, $ttl, $function) {
  * Limit amount of words in a string
  */
 function lwp_limit_words($string, $word_limit){
-  $words = explode(" ",$string);
-  return implode(" ",array_splice($words,0,$word_limit));
+  $words = explode(" ", strip_tags($string));
+  return implode(" ", array_splice($words,0,$word_limit));
 }
 
 
