@@ -24,6 +24,13 @@
   text-shadow: none;
 }
 
+// Display inline block, cross-browser
+.inline-block() {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
 // Helpers
 .nospace() { margin: 0; padding: 0; }
 .debug() { border: thin solid red; }
