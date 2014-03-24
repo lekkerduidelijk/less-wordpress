@@ -59,6 +59,9 @@ if(!function_exists("lwp_init")) {
 add_action( "after_setup_theme", "lwp_setup" );
 add_action( "init", "lwp_init" );
 
+// Disable automatic updates - http://lrdk.nl/qv
+add_filter( 'automatic_updater_disabled', '__return_true' );
+
 // Add ?v=[last modified time] to a file url
 if(!function_exists('versioned_resource')) {
   function versioned_resource($relative_url) {
