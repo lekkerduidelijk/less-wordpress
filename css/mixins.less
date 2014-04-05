@@ -2,6 +2,14 @@
 
 // For more mixins see bootstrap/mixins
 
+// Media query helpers - mobile first Yo!
+// =============================================================================
+@media-xs: ~"(max-width: @{screen-xs-max})"; // 768px and below
+@media-sm: ~"(min-width: @{screen-sm})"; // tablets, 768px and up
+@media-md: ~"(min-width: @{screen-md})"; // desktops, 992px and up
+@media-lg: ~"(min-width: @{screen-lg})"; // large desktops, 1200px and up
+
+
 // Micro clearfix - lrdk.nl/ck
 .cf {
   zoom: 1;
