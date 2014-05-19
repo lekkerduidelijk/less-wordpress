@@ -32,6 +32,16 @@
   text-shadow: none;
 }
 
+// RGBA IE filter mixin
+// Input is #ARGB syntax
+// Calculator at http://kilianvalkhof.com/2010/css-xhtml/how-to-use-rgba-in-ie/
+.msrgba(@color) {
+  background: none;
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{color},endColorstr=@{color})";
+  filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{color},endColorstr=@{color})";
+  zoom: 1;
+}
+
 // Display inline block, cross-browser
 .inline-block() {
   display: inline-block;
