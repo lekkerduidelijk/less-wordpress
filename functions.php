@@ -19,6 +19,7 @@ if(!function_exists("lwp_setup")) {
     // Widgetized Sidebar HTML5 Markup
     if ( function_exists("register_sidebar") ) {
       register_sidebar(array(
+        "id"            => "sidebar-1",
         "name"          => "Sidebar",
         "before_widget" => "<section class='widget'>",
         "after_widget"  => "</section>",
