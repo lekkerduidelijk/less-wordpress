@@ -51,7 +51,9 @@ if(!function_exists("lwp_init")) {
     remove_action( "wp_head", "parent_post_rel_link", 10, 0 );            // previous link
     remove_action( "wp_head", "start_post_rel_link", 10, 0 );             // start link
     remove_action( "wp_head", "adjacent_posts_rel_link_wp_head", 10, 0 ); // Links for Adjacent Posts
-
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );        // Emoji stuff
+    remove_action( 'wp_print_styles', 'print_emoji_styles' );             // Emoji print stuff
+    
     if(!is_admin()) {
       wp_enqueue_script("jquery");
     }
