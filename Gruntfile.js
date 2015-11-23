@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     concat: {
       base: {
         src: [
-          'bower_components/jquery/jquery.js',
+          'bower_components/jquery/dist/jquery.js',
           'bower_components/modernizr/modernizr.js',
           'js/plugins.js',
           'js/main.js',
@@ -55,11 +55,11 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: ['js/*.js'],
+        files: ['js/**/*.js'],
         tasks: ['concat', 'uglify', 'notify:uglify'],
       },
       css: {
-        files: ['css/*.less'],
+        files: ['css/**/*.less'],
         tasks: ['less:development', 'notify:less'],
       },
       livereload: {
