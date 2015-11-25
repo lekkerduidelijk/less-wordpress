@@ -1,20 +1,25 @@
 /**
- * Less WordPress
+ * LESS WordPress
+ *
  * @author: Rutger Laurman - lekkerduidelijk.nl
  * @url: https://github.com/lekkerduidelijk/less-wordpress
  */
 
 @bowerpath: "../bower_components/";
 
-// Import Bootstrap
-@import "@{bowerpath}bootstrap/less/bootstrap";
+// Import Normalize
+@import (less) "@{bowerpath}normalize-css/normalize.css";
 
 // Settings
 @import "variables";
 
 // Base
 @import "mixins";
+@import "fonts";
+@import "type";
 @import "base";
+@import "helpers";
+
 
 // Layout
 // @import "layout/l-header";
@@ -22,4 +27,3 @@
 
 // Modules
 // @import "module/nav";
-

@@ -1,27 +1,19 @@
 <?php
 /**
  * @package WordPress
- * @subpackage LESS_Wordpress
+ * @subpackage LESS_WordPress
  */
 ?>
-  <footer>
-    <?php wp_nav_menu( array(
-      'container_class' => '',
-      'theme_location'  => 'footer',
-      'fallback_cb'     => false
-    )); ?>
-  </footer>
-</div>
-<script>
-  (function(){
-    var lrdk = document.createElement('script');
-    lrdk.src = "<?php echo versioned_resource('/js/all.min.js'); ?>";
-    lrdk.type = 'text/javascript';
-    lrdk.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(lrdk, s);
-  })();
-</script>
+<footer class="l-footer">
+  <p>
+    Copyright &copy; <?php echo date("Y"); ?>
+  </p>
+  <?php wp_nav_menu( array(
+    'container_class' => '',
+    'theme_location'  => 'footer',
+    'fallback_cb'     => false
+  )); ?>
+</footer>
 
 <?php wp_footer(); ?>
 </body>

@@ -1,12 +1,12 @@
 <?php
 /**
  * @package WordPress
- * @subpackage LESS_Wordpress
+ * @subpackage LESS_WordPress
  */
 
 get_header(); ?>
-<div role="main">
-  <div id="content">
+<div class="wrap">
+  <main>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
         <header>
@@ -30,7 +30,7 @@ get_header(); ?>
         </p>
       </article>
     <?php endif; ?>
-  </div>
+  </main>
   <?php get_sidebar(); ?>
-</div> <!-- [role=main] -->
-<?php get_footer(); ?>
+</div>
+<?php get_footer();

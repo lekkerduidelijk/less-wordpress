@@ -1,0 +1,39 @@
+/**
+ * Type
+ *
+ * @author: Rutger Laurman - lekkerduidelijk.nl
+ */
+
+// Font weights
+.font-weight-light()   { font-weight: 300; }
+.font-weight-regular() { font-weight: 400; }
+.font-weight-bold()    { font-weight: 700; }
+
+// Font size variables
+@alpha-size:   48px;
+@beta-size:    36px;
+@gamma-size:   24px;
+@delta-size:   18px;
+@epsilon-size: 16px;
+@zeta-size:    14px;
+@eta-size:     12px;
+
+// Font size mixins
+.alpha   { font-size: @alpha-size;   }
+.beta    { font-size: @beta-size;    }
+.gamma   { font-size: @gamma-size;   }
+.delta   { font-size: @delta-size;   }
+.epsilon { font-size: @epsilon-size; }
+.zeta    { font-size: @zeta-size;    }
+.eta     { font-size: @eta-size;     }
+
+// Base and heading font
+.font-family-base() {
+  .font-weight-regular;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.font-family-heading() {
+  .font-weight-bold;
+  font-family: Helvetica, Arial, sans-serif;
+}

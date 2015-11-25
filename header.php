@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage LESS_Wordpress
+ * @subpackage LESS_WordPress
  */
 ?><!doctype html>
 <html class="no-js">
@@ -20,21 +20,23 @@
   // Check for SVG support
   (function(H){if(!!("createElementNS"in document&&document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)){H.className+=" svg"}else{H.className+=" no-svg"}})(document.documentElement);
 </script>
-<link rel="stylesheet" type="text/css" href="<?php echo versioned_resource('/css/style.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo versioned_resource('/css/style.full.css') ?>">
+<script async src="<?php echo versioned_resource('/js/app.min.js'); ?>"></script>
 <?php wp_head(); ?>
-<!--[if lt IE 9]>
-  <script src="<?php echo versioned_resource('/js/oldbrowsers.js') ?>"></script>
-<![endif]-->
 <body <?php body_class(); ?>>
-<div id="container">
-  <header role="banner">
-    <figure id="logo"><a href="<?php echo get_option('home'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="<?php bloginfo('name'); ?>"></a></figure>
+
+  <header class="l-header" role="banner">
+
+  <?php if(is_front_page()) : ?><h1 class="branding"><?php else : ?><div class="branding"><?php endif; ?>
+    <a href="<?php echo get_option('home'); ?>" rel="home"><img src="<?php bloginfo('template_url'); ?>/img/logo.svg" alt="<?php bloginfo('name'); ?>"></a>
+  <?php if(is_front_page()) : ?></h1><?php else : ?></div><?php endif; ?>
+
     <p class="description"><?php bloginfo('description'); ?></p>
-    <nav id="access" role="navigation">
+    <nav id="access">
       <?php wp_nav_menu(array(
         'theme_location'  => 'primary',
         'container'       => '',
         'menu_class'      => ''
       )); ?>
-    </nav><!-- #access -->
+    </nav>
   </header>

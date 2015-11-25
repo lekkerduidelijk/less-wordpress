@@ -1,13 +1,11 @@
 <?php
 /**
  * @package WordPress
- * @subpackage LESS_Wordpress
+ * @subpackage LESS_WordPress
  */
-
 get_header(); ?>
-
-<div role="main">
-  <div id="content">
+<div class="wrap">
+  <main>
     <article>
       <header>
         <h1><?php _e("Not found","lwp") ?></h1>
@@ -23,8 +21,7 @@ get_header(); ?>
       </script>
       <script src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
     </article>
-  </div>
+  </main>
   <?php get_sidebar(); ?>
-</div> <!-- [role=main] -->
-
-<?php get_footer(); ?>
+</div>
+<?php get_footer();

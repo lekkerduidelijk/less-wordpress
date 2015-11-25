@@ -1,9 +1,9 @@
 <?php
 /**
  * @package WordPress
- * @subpackage LESS_Wordpress
+ * @subpackage LESS_WordPress
  */
 ?>
-<aside id="secondary">
+<aside>
   <?php dynamic_sidebar('Sidebar'); ?>
 </aside>
