@@ -1,9 +1,6 @@
 # LESS Wordpress theme
 
-This theme is entirely based on Walker Hamiltons [HTML5 Boilerplate for Wordpress](https://github.com/walker/html5-boilerplate-for-wordpress).
-
-Walker did a splendid job and I have used his theme for quite some years now.
-I found myself stripping out the same stuff over and over again, that's why I created my own version of it.
+Custom theme kickstarter for WordPress
 
 ---
 
@@ -13,8 +10,8 @@ I found myself stripping out the same stuff over and over again, that's why I cr
 * [Download Wordpress](http://wordpress.org)
 * Run <code>npm install</code>
 * Run <code>bower install</code>
-* Run <code>grunt build</code> for the first time
-* Run <code>grunt watch</code> during development
+* Run <code>gulp build</code> for the first time
+* Run <code>gulp watch</code> during development
 * Get cracking!
 
 ## Recommended plugin
