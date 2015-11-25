@@ -20,7 +20,7 @@
   // Check for SVG support
   (function(H){if(!!("createElementNS"in document&&document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)){H.className+=" svg"}else{H.className+=" no-svg"}})(document.documentElement);
 </script>
-<link rel="stylesheet" type="text/css" href="<?php echo versioned_resource('/css/style.full.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo versioned_resource('/css/style.css') ?>">
 <script async src="<?php echo versioned_resource('/js/app.min.js'); ?>"></script>
 <?php wp_head(); ?>
 <body <?php body_class(); ?>>
