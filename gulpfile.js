@@ -7,7 +7,6 @@
  * @TODO:
  * - Add media task
  * - Add UnCSS task
- * - Add banner task
  * - Investigate subtasks / separate files
  */
 
@@ -25,8 +24,6 @@ var banner = ['/*!',
   ' * @date:   <%= new Date().getDate() %>-<%= new Date().getMonth()+1 %>-<%= new Date().getFullYear() %>',
   ' */',
   ''].join('\n');
-
-// var autoprefixer = new plugins.lessPluginAutoprefix({ browsers: ["last 2 versions"]});
 
 // Temporary solution until gulp 4
 // https://github.com/gulpjs/gulp/issues/355
@@ -69,6 +66,9 @@ gulp.task('less', function () {
   .pipe(plugins.header(banner, { pkg: pkg }))
   .pipe(gulp.dest('css/'))
 
+  // Livereload
+  .pipe(plugins.livereload())
+
   // Notify
   .pipe(plugins.notify("LESS complete"));
 
@@ -98,6 +98,9 @@ gulp.task('js', function(){
   .pipe(plugins.header(banner, { pkg: pkg }))
   .pipe(gulp.dest('js/'))
 
+  // Livereload
+  .pipe(plugins.livereload())
+
   // Notify
   .pipe(plugins.notify("JS complete"));
 
@@ -108,10 +111,10 @@ gulp.task('js', function(){
    ========================================================================== */
 
 gulp.task('watch', function () {
-  gulp.watch('js/**/*.js', ['js']);
-  gulp.watch('less/**/*.less', ['less']);
   plugins.livereload.listen();
-  // gulp.watch('/**/*').on('change', plugins.livereload.changed);
+
+  gulp.watch(['js/**/*.js', '!js/app.min.js', '!js/app.full.js'], ['js']);
+  gulp.watch('less/**/*.less', ['less']);
 });
 
 /* ==========================================================================
