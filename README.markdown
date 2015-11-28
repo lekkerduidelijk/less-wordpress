@@ -1,3 +1,5 @@
+![Travis CI](https://api.travis-ci.org/lekkerduidelijk/less-wordpress.svg)
+
 # LESS Wordpress theme
 
 Custom theme kickstarter for WordPress
