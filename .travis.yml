@@ -8,6 +8,6 @@ cache:
 before_script:
   - npm install -g gulp
   - npm install -g bower
-script: 
+script:
   - bower install
-  - gulp build
+  - gulp test

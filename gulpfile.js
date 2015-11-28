@@ -7,6 +7,7 @@
  * @TODO:
  * - Add media task
  * - Add UnCSS task
+ * - Make testing more DRY
  * - Investigate subtasks / separate files
  */
 
@@ -75,6 +76,30 @@ gulp.task('less', function () {
 });
 
 
+// Stylesheets test
+gulp.task('less:test', function () {
+  return gulp.src('less/style.less', { base: './' })
+
+  // Less + sourcemap
+  .pipe(plugins.sourcemaps.init({
+    debug: true
+  }))
+  .pipe(plugins.less())
+  .pipe(plugins.sourcemaps.write())
+
+  // Autoprefixer
+  .pipe(plugins.autoprefixer())
+
+  // Minify
+  .pipe(plugins.minifyCss({
+    keepSpecialComments: '0'
+  }))
+
+  // Header / banner
+  .pipe(plugins.header(banner, { pkg: pkg }));
+
+});
+
 /* Javascripts
    ========================================================================== */
 
@@ -106,6 +131,22 @@ gulp.task('js', function(){
 
 });
 
+// javascript test
+
+gulp.task('js:test', function(){
+  return gulp.src('js/app.js')
+
+  // Include files
+  .pipe(plugins.include())
+
+  // Uglify
+  .pipe(plugins.uglify())
+
+  // Header / banner
+  .pipe(plugins.header(banner, { pkg: pkg }));
+
+});
+
 
 /* Watch
    ========================================================================== */
@@ -126,6 +167,13 @@ gulp.task('watch', function () {
 
 gulp.task('default', function (done){
   runSequence('build', 'watch', done);
+});
+
+/* Test
+   ========================================================================== */
+
+gulp.task('test', function (done){
+  runSequence('less:test', 'js:test', done);
 });
 
 /* Build
