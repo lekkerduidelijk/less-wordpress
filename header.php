@@ -15,10 +15,10 @@
 <meta name="viewport" content="width=device-width">
 <script>
   // Check for javascript support
-  (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);
+  (function(H){H.className=H.className.replace(/\bno-js\b/,'js');})(document.documentElement);
 
   // Check for SVG support
-  (function(H){if(!!("createElementNS"in document&&document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)){H.className+=" svg"}else{H.className+=" no-svg"}})(document.documentElement);
+  (function(H){if(!!("createElementNS"in document&&document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)){H.className+=" svg";}else{H.className+=" no-svg";}})(document.documentElement);
 </script>
 <link rel="stylesheet" type="text/css" href="<?php echo versioned_resource('/css/style.css') ?>">
 <script async src="<?php echo versioned_resource('/js/app.min.js'); ?>"></script>
